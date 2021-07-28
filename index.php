@@ -1,21 +1,25 @@
 <?php
-//Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
+
+/**
+ * Database config
+ */
+
+$host = "sql6.freemysqlhosting.net";
+$username   = "sql6428004";
+$password   = "B17vSF1Agi";
+$dbname     = "sql6428004";
+// $dbname     = "nathant1_anibase";
+$dsn        = "mysql:host=$host;dbname=$dbname";
+$options    = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+              );
+
 try{
-    $pdo_connection = new PDO($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+    $pdo_connection = new PDO($dsn, $username, $password, $options);
 } catch(PDOException $e){
     die("ERROR: Could not connect. " . $e->getMessage());
 }
 
-// $conn = mysqli_connect();
-echo 'helo';
 ?>
 <?php
 echo 'php app';
