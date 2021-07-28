@@ -8,13 +8,7 @@ $cleardb_db = substr($cleardb_url["path"],1);
 $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
-try{
-    $pdo_connection = new PDO($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-} catch(PDOException $e){
-    die("ERROR: Could not connect. " . $e->getMessage());
-}
-
-$conn = mysqli_connect();
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 ?>
 <?php
 echo 'php app';
