@@ -16,6 +16,7 @@ try{
 
 // $conn = mysqli_connect();
 echo $pdo_connection;
+echo 'helo';
 ?>
 <?php
 echo 'php app';
