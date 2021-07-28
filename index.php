@@ -3,7 +3,7 @@
 /**
  * Database config
  */
-
+// https://www.phpmyadmin.co/
 $host = "sql6.freemysqlhosting.net";
 $username   = "sql6428004";
 $password   = "B17vSF1Agi";
