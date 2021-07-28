@@ -23,4 +23,5 @@ try{
 ?>
 <?php
 echo 'php app';
+vardump();
 ?>
