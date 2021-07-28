@@ -14,9 +14,7 @@ try{
     die("ERROR: Could not connect. " . $e->getMessage());
 }
 
-// $conn = mysqli_connect();
-echo $pdo_connection;
-echo 'helo';
+$conn = mysqli_connect();
 ?>
 <?php
 echo 'php app';
